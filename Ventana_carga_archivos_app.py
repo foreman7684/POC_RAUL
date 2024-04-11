@@ -12,7 +12,7 @@ uploaded_file = st.file_uploader("Elige un archivo")
 
 if uploaded_file is not None:
     file_name = {
-    "FileName":uploaded_file.name
+        "FileName":uploaded_file.name
     }
     my_insert_stmt = """ insert into POC_RAUL.public.REPOSITORIO_ARCHIVOS_INTERNET(NOMBRE_ARCHIVO)
     values ('""" +FileName+"""')"""
