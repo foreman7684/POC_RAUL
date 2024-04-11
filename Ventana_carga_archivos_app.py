@@ -15,7 +15,7 @@ if uploaded_file is not None:
         "FileName":uploaded_file.name
     }
     my_insert_stmt = """ insert into POC_RAUL.public.REPOSITORIO_ARCHIVOS_INTERNET(NOMBRE_ARCHIVO)
-    values ('""" +file_name+"""')"""
+    values ('"""file_name"""')"""
     # Aquí puedes procesar tu archivo como necesites
     # Por ejemplo, mostrar un mensaje de confirmación
     st.success('Archivo cargado con éxito!')
