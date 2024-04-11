@@ -15,8 +15,8 @@ if uploaded_file is not None:
     file_name = uploaded_file.name
     file_type = uploaded_file.type
     file_value = b64encode(uploaded_file.getvalue()).decode('utf-8')
-    my_insert_stmt = """ insert into POC_RAUL.public.REPOSITORIO_ARCHIVOS_INTERNET(NOMBRE_ARCHIVO,EXTENSION,ARCHIVO)
-    values ('""" + file_name + """','""" +file_type+"""','""" +file_value+"""')"""
+    my_insert_stmt = """ insert into POC_RAUL.public.REPOSITORIO_ARCHIVOS_INTERNET(NOMBRE_ARCHIVO,EXTENSION)
+    values ('""" + file_name + """','""" +file_type+"""')"""
     session.sql(my_insert_stmt).collect()
     # Aquí puedes procesar tu archivo como necesites
     # Por ejemplo, mostrar un mensaje de confirmación
