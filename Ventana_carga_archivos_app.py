@@ -15,7 +15,7 @@ if uploaded_file is not None:
 
     my_insert_stmt = """ insert into POC_RAUL.public.REPOSITORIO_ARCHIVOS_INTERNET(NOMBRE_ARCHIVO)
     values ('""" + file_name + """')"""
-    st.write(my_insert_stmt)
+    session.sql(my_insert_stmt).collect()
     # Aquí puedes procesar tu archivo como necesites
     # Por ejemplo, mostrar un mensaje de confirmación
     st.success('Archivo cargado con éxito!')
